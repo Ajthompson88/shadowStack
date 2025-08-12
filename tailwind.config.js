@@ -22,7 +22,13 @@ export default {
           800: "#121212",
           900: "#0a0a0a",
           950: "#050505"
+        },
+        blueglow: {
+          DEFAULT: "#00B2FF",
+          light: "#66D8FF", // for hover or soft glow
+          dark: "#007ACC"   // optional darker shade
         }
+        
       },
       animation: {
         fadeIn: "fadeIn 1s ease-out forwards",

@@ -30,26 +30,26 @@ const Contact = () => {
             type="text"
             name="name"
             placeholder="Your Name"
-            className="p-4 rounded bg-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+            className="p-4 rounded bg-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blueglow transition"
             required
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
-            className="p-4 rounded bg-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+            className="p-4 rounded bg-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blueglow transition"
             required
           />
           <textarea
             name="message"
             placeholder="Your Message"
             rows="5"
-            className="p-4 rounded bg-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+            className="p-4 rounded bg-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blueglow transition"
             required
           />
           <button
             type="submit"
-            className="mt-2 self-start bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded shadow-md transition-all duration-300 hover:shadow-purple-500/50"
+            className="mt-2 self-start  bg-blueglow hover:bg-blueglow-dark text-white font-semibold py-3 px-6 rounded shadow-md transition-all duration-300 hover:shadow-purple-500/50"
           >
             Send Message
           </button>

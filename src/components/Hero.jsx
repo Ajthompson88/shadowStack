@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import anime from "animejs/lib/anime.es.js"; // ✅ Correct ESM entry point
-import logo from "../assets/logo.svg?raw";   // ✅ Vite raw loader
+import logo from "../assets/shadowstack-logo?raw";   // ✅ Vite raw loader
 
 export default function Hero() {
   const heroRef = useRef();

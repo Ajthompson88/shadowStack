@@ -43,7 +43,7 @@ function SkillItem({ icon: Icon, name }) {
         isVisible ? "animate-glow" : "opacity-0"
       }`}
     >
-      {Icon && <Icon className="text-4xl text-indigo-400 hover:text-indigo-300 hover:scale-110 transition-transform duration-300" />}
+      {Icon && <Icon className="text-4xl text-blueglow hover:text-blueglow-light hover:scale-110 transition-transform duration-300" />}
       <span className="mt-2 text-sm">{name}</span>
     </div>
   );

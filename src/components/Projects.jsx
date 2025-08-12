@@ -16,9 +16,9 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-800 rounded-xl shadow-lg hover:shadow-purple-500/50 p-6 transition-transform transform hover:-translate-y-1"
+              className="bg-gray-800 rounded-xl shadow-lg hover:shadow-blueglow/50 p-6 transition-transform transform hover:-translate-y-1"
             >
-              <h3 className="text-xl font-bold mb-2 text-purple-400">
+              <h3 className="text-xl font-bold mb-2 text-blueglow">
                 {project.title}
               </h3>
               <p className="text-gray-300 mb-3">{project.description}</p>
@@ -32,7 +32,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-purple-400 hover:text-white underline"
+                    className="text-blueglow hover:text-blueglow-light underline"
                   >
                     GitHub
                   </a>
@@ -42,7 +42,7 @@ const Projects = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-purple-400 hover:text-white underline"
+                    className="text-blueglow hover:text-blueglow-light underline"
                   >
                     Live Demo
                   </a>
