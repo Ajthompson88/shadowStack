@@ -1,0 +1,23 @@
+<svg width="600" height="150" viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Simple blur filters for layered glow -->
+    <filter id="blur4" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" />
+    </filter>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" />
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="black" />
+
+  <!-- Center group -->
+  <g text-anchor="middle" dominant-baseline="middle" transform="translate(300,75)">
+    <!-- Outer cyan glow -->
+    <text class="logo-text" font-family="Orbitron, sans-serif" font-size="96" fill="#8BE9FD" opacity="0.6" filter="url(#blur10)">ShadowStack</text>
+    <!-- Inner blue glow -->
+    <text class="logo-text" font-family="Orbitron, sans-serif" font-size="96" fill="#00B2FF" opacity="0.85" filter="url(#blur4)">ShadowStack</text>
+    <!-- Core text -->
+    <text class="logo-text" font-family="Orbitron, sans-serif" font-size="96" fill="#00B2FF" stroke="white" stroke-opacity="0.15" stroke-width="0.5">ShadowStack</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg viewBox="-25 0 1260 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"
+     style="display:block; margin:0 auto; width:min(90vw, 1440px); height:auto; background:#000">
+  <defs>
+    <!-- Bigger filter region to prevent glow clipping -->
+    <filter id="glowOuter" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+    <filter id="glowInner" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" />
+    </filter>
+  </defs>
+
+  <!-- Optional background, kept black for your header -->
+  <rect width="100%" height="100%" fill="#000"/>
+
+  <!-- Centered group -->
+  <g transform="translate(600,150)" text-anchor="middle" dominant-baseline="middle">
+    <!-- Outer cyan glow -->
+    <text style="font-family:'Orbitron',Monospace; font-size:160px; font-weight:700; fill:#8BE9FD; opacity:0.55"
+          filter="url(#glowOuter)">ShadowStack</text>
+    <!-- Inner blue glow -->
+    <text style="font-family:'Orbitron',Monospace; font-size:160px; font-weight:700; fill:#00B2FF; opacity:0.85"
+          filter="url(#glowInner)">ShadowStack</text>
+    <!-- Core text -->
+    <text style="font-family:'Orbitron',Monospace; font-size:160px; font-weight:700; fill:#00B2FF; stroke:#FFFFFF; stroke-opacity:0.15; stroke-width:2">
+      ShadowStack
+    </text>
+  </g>
+</svg>

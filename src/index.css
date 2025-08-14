@@ -4,8 +4,62 @@
 
 body {
   @apply bg-noir-900 text-white font-mono;
-},
+}
 html {
   scroll-behavior: smooth;
 }
 
+@layer components {
+  /* === Glossy card === */
+  .glossy-card {
+    @apply relative overflow-hidden rounded-2xl border border-white/10
+           bg-gradient-to-br from-zinc-800/70 to-zinc-900/70
+           shadow-xl transition-transform;
+    /* inner highlight + drop shadow for depth */
+    box-shadow:
+      inset 0 1px 0 0 rgba(255,255,255,.08),
+      0 14px 34px -16px rgba(0,0,0,.65);
+  }
+  /* static “lens” highlight near the top */
+  .glossy-card::before {
+    content: "";
+    position: absolute; inset: -1px;
+    background: radial-gradient(120% 80% at 50% -20%,
+      rgba(255,255,255,.25) 0%,
+      rgba(255,255,255,.08) 38%,
+      rgba(255,255,255,0) 60%);
+    pointer-events: none;
+  }
+  /* moving sheen stripe */
+  .glossy-card::after {
+    content: "";
+    position: absolute; top: -60%; left: -30%;
+    width: 160%; height: 220%;
+    background: linear-gradient(120deg,
+      transparent 40%,
+      rgba(255,255,255,.16) 50%,
+      rgba(255,255,255,.35) 52%,
+      rgba(255,255,255,.16) 54%,
+      transparent 60%);
+    transform: translateX(-60%) rotate(-12deg);
+    transition: transform .9s cubic-bezier(.2,.7,.2,1);
+    pointer-events: none;
+  }
+  .glossy-card:hover::after {
+    transform: translateX(40%) rotate(-12deg);
+  }
+
+  /* === Glossy section overlay (subtle top gloss) === */
+  .glossy-section {
+    @apply relative overflow-hidden;
+  }
+  .glossy-section::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(120% 60% at 50% -20%,
+      rgba(255,255,255,.12) 0%,
+      rgba(255,255,255,.05) 35%,
+      transparent 60%);
+    pointer-events: none;
+  }
+}

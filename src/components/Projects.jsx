@@ -6,8 +6,8 @@ import projects from "../data/projectData.js"; // Adjust the import path as nece
 const Projects = () => {
   return (
     <section
-      id="projects"
-      className="bg-gradient-to-br from-gray-900 to-black text-white py-16 px-6"
+    id="projects"
+    className="glossy-section bg-gradient-to-br from-gray-900 to-black text-white py-16 px-6"
     >
       <div className="max-w-5xl mx-auto">
         <SectionTitle title="Projects" />
@@ -16,7 +16,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-800 rounded-xl shadow-lg hover:shadow-blueglow/50 p-6 transition-transform transform hover:-translate-y-1"
+              className="glossy-card backdrop-blur-md bg-white/5 bg-gray-800 rounded-xl shadow-lg hover:shadow-blueglow/50 p-6 transition-transform transform hover:-translate-y-1"
             >
               <h3 className="text-xl font-bold mb-2 text-blueglow">
                 {project.title}
