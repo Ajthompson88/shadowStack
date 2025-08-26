@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-gradient-to-br from-gray-800 to-gray-900 text-white py-16 px-6"
+      className="bg-gradient-to-br from-gray-900 to-black text-white py-16 px-6"
     >
       <div className="max-w-4xl mx-auto">
         <SectionTitle title="Contact" />
@@ -49,7 +49,7 @@ const Contact = () => {
           />
           <button
             type="submit"
-            className="mt-2 self-start  bg-blueglow hover:bg-blueglow-dark text-white font-semibold py-3 px-6 rounded shadow-md transition-all duration-300 hover:shadow-purple-500/50"
+            className="mt-2 self-start  bg-blueglow-dark hover:bg-blueglow-light text-white font-semibold py-3 px-6 rounded shadow-md transition-all duration-300 hover:shadow-purple-500/50"
           >
             Send Message
           </button>
@@ -58,7 +58,7 @@ const Contact = () => {
         {/* Social Links */}
         <div className="mt-12 flex justify-center gap-6">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/andrew.thompson.58726"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition transform hover:scale-110"
@@ -66,7 +66,7 @@ const Contact = () => {
             <FaFacebookF size={24} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/aj.thompson8888/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition transform hover:scale-110"
@@ -82,7 +82,7 @@ const Contact = () => {
             <FaTwitter size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="www.linkedin.com/in/andrew-thompson-442477aa"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition transform hover:scale-110"
