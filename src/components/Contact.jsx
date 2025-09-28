@@ -82,7 +82,7 @@ const Contact = () => {
             <FaTwitter size={24} />
           </a>
           <a
-            href="www.linkedin.com/in/andrew-thompson-442477aa"
+            href="https://www.linkedin.com/in/andrew-thompson-442477aa"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition transform hover:scale-110"
