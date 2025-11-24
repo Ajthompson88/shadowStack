@@ -1,7 +1,7 @@
 import SectionTitle from "./SectionTitle";
 import Section from "../layout/Section";
 import { skills } from "../data/skills";
-import { useEffect, useRef, useState } from "react";
+import useReveal from "../hooks/useReveal";
 
 export default function Skills() {
   return (
@@ -17,23 +17,7 @@ export default function Skills() {
 }
 
 function SkillItem({ icon: Icon, name }) {
-  const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // only trigger once
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
+  const { ref, isVisible } = useReveal();
 
   return (
     <div
