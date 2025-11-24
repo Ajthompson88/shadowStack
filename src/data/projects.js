@@ -9,7 +9,7 @@ const projects = [
     tech: ["React", "Node.js", "MongoDB", "OpenAI API"],
     github: "https://github.com/ajthompson88/AdonAI",
     live: "",
-    "date": "May 2025 \u2013 Present",
+    "date": "May 2025 - Present",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const projects = [
     tech: ["React", "Express", "MongoDB"],
     github: "https://github.com/ajthompson88/JobTracker",
     live: "",
-    "date": "Nov 2024 \u2013 May 2025",
+    "date": "Nov 2024 - May 2025",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const projects = [
     tech: ["Node.js", "MongoDB", "Express", "Mongoose"],
     github: "https://github.com/Ajthompson88/M14KanbanBoardChallenge",
     live: "https://kanban-board-t0wb.onrender.com",
-    "date": "Nov 2024 \u2013 May 2025",
+    "date": "Nov 2024 - May 2025",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const projects = [
       live: "https://booksearch-56mo.onrender.com",
       github: "https://github.com/Ajthompson88/M18",
       tech: ["MongoDB","Express","React","Node"],
-      "date": "Nov 2024 \u2013 May 2025",
+      "date": "Nov 2024 - May 2025",
     },
     {
       id: 5,
@@ -47,7 +47,7 @@ const projects = [
       live: "https://lookmeup.onrender.com",
       github: "https://github.com/Ajthompson88/LookMeUp",
       tech: ["TypeScript","JavaScript","CSS","HTML"],
-      "date": "Nov 2024 \u2013 May 2025",
+      "date": "Nov 2024 - May 2025",
     
     },
     {
@@ -57,7 +57,7 @@ const projects = [
       live: "https://weatherapi-1-ia2e.onrender.com",
       github: "https://github.com/Ajthompson88/WeatherAPI",
       tech: ["Typescript","Javascript","CSS","HTML"],
-      "date": "Nov 2024 \u2013 May 2025",
+      "date": "Nov 2024 - May 2025",
      
     }
   ];

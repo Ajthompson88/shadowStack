@@ -2,50 +2,50 @@
 
 > A sleek, modern noir-themed developer portfolio built with Vite, TailwindCSS, and React.
 
-## 📚 Table of Contents
+## Table of Contents
 
-* [🚀 Project Overview](#-project-overview)
-* [🎨 Tech Stack](#-tech-stack)
-* [📂 Folder Structure](#-folder-structure)
-* [💻 Getting Started](#-getting-started)
-* [📦 Installing Dependencies](#-installing-dependencies)
-* [🧪 Development](#-development)
-* [🚀 Deployment (Netlify)](#-deployment-netlify)
-* [📸 Screenshots](#-screenshots)
-* [📄 License](#-license)
+* [Project Overview](#-project-overview)
+* [Tech Stack](#-tech-stack)
+* [Folder Structure](#-folder-structure)
+* [Getting Started](#-getting-started)
+* [Installing Dependencies](#-installing-dependencies)
+* [Development](#-development)
+* [Deployment (Netlify)](#-deployment-netlify)
+* [Screenshots](#-screenshots)
+* [License](#-license)
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 ShadowStack is a developer portfolio showcasing a personalized modern noir aesthetic with animated transitions, SVG logo intro using `anime.js`, and section-based component architecture.
 
-## 🎨 Tech Stack
+##  Tech Stack
 
 * **Frontend**: React, Vite
 * **Styling**: Tailwind CSS
 * **Animation**: Anime.js
 * **Deployment**: Netlify
 
-## 📂 Folder Structure
+## Folder Structure
 
 ```
 shadowStack/
 ├── public/
 ├── src/
-│   ├── assets/         # SVGs, images
-│   ├── components/     # Reusable components (Hero, About, Projects, Skills, Contact, Footer, SectionTitle)
-│   ├── layout/         # Layout wrapper for page scaffolding
-│   ├── App.jsx         # Root component
-│   ├── main.jsx        # Vite entry
-│   └── index.css       # Tailwind base
-├── tailwind.config.js  # Tailwind config with animations
-├── vite.config.js      # Vite config
-├── README.md           # Project documentation
+│   ├── assets/
+│   ├── components/
+│   ├── layout/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── tailwind.config.js
+├── vite.config.js
+├── README.md
 └── package.json
 ```
 
-## 💻 Getting Started
+## Getting Started
 
 1. **Clone the repo:**
 
@@ -69,7 +69,7 @@ shadowStack/
 4. **Visit your app:**
    Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## 📦 Installing Dependencies
+## Installing Dependencies
 
 Make sure these are installed:
 
@@ -77,7 +77,7 @@ Make sure these are installed:
 npm install tailwindcss postcss autoprefixer animejs
 ```
 
-## 🧪 Development
+## Development
 
 Vite handles fast refresh and asset optimization. You can edit `src/components/` or `src/layout/` for modular updates.
 
@@ -92,7 +92,7 @@ Vite handles fast refresh and asset optimization. You can edit `src/components/`
 * `tailwind.config.js` — Custom animation & utility settings
 * `App.jsx` — Section mount/transition management
 
-## 🚀 Deployment (Netlify)
+## Deployment (Netlify)
 
 1. Push your code to GitHub.
 2. Go to [Netlify](https://netlify.com) and create a new site.
@@ -108,10 +108,10 @@ Vite handles fast refresh and asset optimization. You can edit `src/components/`
    ```
 5. Deploy and done 🎉
 
-## 📸 Screenshots
+## Screenshots
 
 > *Add screenshots here once the UI is ready.*
 
-## 📄 License
+## License
 
 MIT License © 2025 Andrew Thompson

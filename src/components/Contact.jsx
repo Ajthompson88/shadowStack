@@ -23,7 +23,7 @@ const Contact = () => {
           className="mt-10 flex flex-col gap-6"
           onSubmit={(e) => {
             e.preventDefault();
-            alert("This form doesn't do anything... yet! 😅");
+            alert("This form doesn't do anything... yet! ");
           }}
         >
           <input
@@ -82,7 +82,7 @@ const Contact = () => {
             <FaTwitter size={24} />
           </a>
           <a
-            href="www.linkedin.com/in/andrew-thompson-442477aa"
+            href="https://www.linkedin.com/in/andrew-thompson-442477aa"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition transform hover:scale-110"

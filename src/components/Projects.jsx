@@ -1,7 +1,7 @@
 // src/components/Projects.jsx
 import React from "react";
 import SectionTitle from "./SectionTitle";
-import projects from "../data/projectData.js"; // Adjust the import path as necessary
+import projects from "../data/project.js"; // Adjust the import path as necessary
 
 const Projects = () => {
   return (
