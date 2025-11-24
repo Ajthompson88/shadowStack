@@ -1,6 +1,8 @@
 
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { SiTailwindcss, SiMongodb, SiTypescript, SiVite } from "react-icons/si";
+import { SiPostgresql } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 export const skills = [
   { name: "HTML", icon: FaHtml5 },
@@ -12,5 +14,6 @@ export const skills = [
   { name: "Tailwind", icon: SiTailwindcss },
   { name: "MongoDB", icon: SiMongodb },
   { name: "Git", icon: FaGitAlt },
-  { name: "Vite", icon: SiVite }
+  { name: "Vite", icon: SiVite },
+  { name: "PostgreSQL", icon: BiLogoPostgresql },
 ];

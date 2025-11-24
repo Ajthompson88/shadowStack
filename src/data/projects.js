@@ -23,7 +23,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "KanBan Board",
+    title: "ShadowStack KanBan Board",
     description:
       "Backend API for a social app where users post thoughts and add friends.",
     tech: ["Node.js", "MongoDB", "Express", "Mongoose"],
