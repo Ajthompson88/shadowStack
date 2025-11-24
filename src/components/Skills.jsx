@@ -1,19 +1,18 @@
-import SectionTitle from './SectionTitle';
-import { skills } from '../data/skills';
+import SectionTitle from "./SectionTitle";
+import Section from "../layout/Section";
+import { skills } from "../data/skills";
 import { useEffect, useRef, useState } from "react";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-zinc-900 to-black text-white">
-      <div className="container mx-auto px-4">
-        <SectionTitle title="Skills" />
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mt-8">
-          {skills.map((skill, index) => (
-            <SkillItem key={index} icon={skill.icon} name={skill.name} />
-          ))}
-        </div>
+    <Section id="skills">
+      <SectionTitle title="Skills" />
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mt-8">
+        {skills.map((skill, index) => (
+          <SkillItem key={index} icon={skill.icon} name={skill.name} />
+        ))}
       </div>
-    </section>
+    </Section>
   );
 }
 
