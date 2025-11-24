@@ -92,6 +92,10 @@ Vite handles fast refresh and asset optimization. You can edit `src/components/`
 * `tailwind.config.js` — Custom animation & utility settings
 * `App.jsx` — Section mount/transition management
 
+## Continuous Integration
+
+GitHub Actions (`.github/workflows/ci.yml`) runs on every push to `main`/`master` and on all pull requests. The workflow installs dependencies with `npm ci`, runs `npm run lint`, and finishes with `npm run build`. Run those commands locally before opening a PR so CI stays green.
+
 ## Deployment (Netlify)
 
 1. Push your code to GitHub.

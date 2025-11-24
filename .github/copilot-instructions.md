@@ -78,6 +78,7 @@ Do not modify existing scripts or Node version requirements (20.x) unless instru
 ## 9. PR Expectations
 - Keep changes small and scoped.
 - Run npm run lint before considering a change complete.
+- CI (`.github/workflows/ci.yml`) runs lint + build on every push/PR; keep those commands green locally.
 - Follow existing component patterns.
 - Respect the noir design language and animation boundaries.
 
