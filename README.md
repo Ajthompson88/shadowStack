@@ -10,7 +10,9 @@
 * [Getting Started](#-getting-started)
 * [Installing Dependencies](#-installing-dependencies)
 * [Development](#-development)
-* [Deployment (Netlify)](#-deployment-netlify)
+* [Style Guide](#-style-guide)
+* [Storybook](#-storybook)
+* [Deployment (Vercel)](#-deployment-vercel)
 * [Screenshots](#-screenshots)
 * [License](#-license)
 
@@ -25,7 +27,7 @@ ShadowStack is a developer portfolio showcasing a personalized modern noir aesth
 * **Frontend**: React, Vite
 * **Styling**: Tailwind CSS
 * **Animation**: Anime.js
-* **Deployment**: Netlify
+* **Deployment**: Vercel
 
 ## Folder Structure
 
@@ -92,6 +94,19 @@ Vite handles fast refresh and asset optimization. You can edit `src/components/`
 * `tailwind.config.js` - Custom animation & utility settings
 * `App.jsx` - Section mount/transition management
 
+## Style Guide
+
+Visual tokens, layout primitives, and animation conventions live in [`docs/style-guide.md`](docs/style-guide.md). Review that document before introducing new colors, gradients, CSS utilities, or animation logic so the noir aesthetic remains consistent.
+
+## Storybook
+
+Component previews and glossy-card examples live in Storybook for rapid visual QA.
+
+- `npm run storybook` - launches Storybook on port 6006.
+- `npm run build-storybook` - produces a static Storybook build in `storybook-static/`.
+
+Stories reside next to components (e.g., `src/components/SectionTitle.stories.jsx`) and share the same Tailwind + Orbitron styling via `.storybook/preview.js`.
+
 ## Testing
 
 Automated tests run on [Vitest](https://vitest.dev/) with React Testing Library (`src/components/__tests__`, `src/layout/__tests__`).  
@@ -103,21 +118,19 @@ Automated tests run on [Vitest](https://vitest.dev/) with React Testing Library 
 
 GitHub Actions (`.github/workflows/ci.yml`) runs on every push to `main`/`master` and on all pull requests. The workflow installs dependencies with `npm ci`, runs `npm run lint`, `npm run test`, and `npm run build`. Run those commands locally before opening a PR so CI stays green.
 
-## Deployment (Netlify)
+## Deployment (Vercel)
 
-1. Push your code to GitHub.
-2. Go to [Netlify](https://netlify.com) and create a new site.
-3. Select your repo, set build command:
+1. Push your code to GitHub (or another supported Git provider).
+2. Go to [Vercel](https://vercel.com) and create a new project, importing this repository.
+3. Confirm the build settings (Vercel auto-detects Vite, but double-check):
 
-   ```bash
-   npm run build
+   ```text
+   Build Command: npm run build
+   Output Directory: dist
    ```
-4. Set publish directory:
-
-   ```bash
-   dist
-   ```
-5. Deploy and done 🎉
+4. Deploy. Vercel installs dependencies under Node 20 (per `package.json` `engines`) and runs the build automatically.
+5. The included `vercel.json` file keeps the SPA working by rewriting all routes to `index.html` and adding security headers.
+6. Push new commits to the connected branch (or use the Vercel dashboard) to kick off redeploys.
 
 ## Screenshots
 

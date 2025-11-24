@@ -37,6 +37,7 @@ Prefer clarity over cleverness.
 ### Colors
 - Use the noir palette defined in tailwind.config.js.
 - Do not introduce hardcoded hex values unless explicitly instructed.
+- Reference `docs/style-guide.md` for the canonical list of tokens and animation guidance.
 
 ### Shadows, borders, glows
 - Use existing tokens (blueglow, noir shades).
@@ -73,6 +74,8 @@ ShadowStack uses anime.js.
 - Preview: npm run preview
 - Lint: npm run lint
 - Test (CI run): npm run test (use npm run test:watch during development)
+- Storybook dev: npm run storybook
+- Storybook build: npm run build-storybook
 
 Do not modify existing scripts or Node version requirements (20.x) unless instructed.
 
@@ -81,6 +84,7 @@ Do not modify existing scripts or Node version requirements (20.x) unless instru
 - Run npm run lint before considering a change complete.
 - CI (`.github/workflows/ci.yml`) runs lint + test + build on every push/PR; keep those commands green locally.
 - Run npm run test (or npm run test:watch) so Vitest coverage stays healthy.
+- Keep Storybook stories updated when modifying visual components; add or adjust stories alongside component changes.
 - Follow existing component patterns.
 - Respect the noir design language and animation boundaries.
 
