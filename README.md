@@ -89,8 +89,15 @@ Vite handles fast refresh and asset optimization. You can edit `src/components/`
 * `Skills.jsx` — Technology badges and proficiency
 * `Contact.jsx` — Email or social connection
 * `Footer.jsx` — Copyright & links
-* `tailwind.config.js` — Custom animation & utility settings
-* `App.jsx` — Section mount/transition management
+* `tailwind.config.js` - Custom animation & utility settings
+* `App.jsx` - Section mount/transition management
+
+## Testing
+
+Automated tests run on [Vitest](https://vitest.dev/) with React Testing Library (`src/components/__tests__`, `src/layout/__tests__`).  
+
+- `npm run test` - executes the full suite once (CI uses this).
+- `npm run test:watch` - interactive mode while developing.
 
 ## Continuous Integration
 
