@@ -11,15 +11,17 @@ return (
   <div className="space-y-8 mt-8">
     {skillGroups.map((group) => (
       <div key={group.title}>
-        <h3 className="    
-        text-2xl
-        font-extrabold
-        tracking-wider
-        uppercase
-       text-white
-        mb-8">
-          {group.title}
-        </h3>
+        <h3 className="
+      text-2xl
+      font-semibold
+      tracking-wide
+      text-white
+      mb-5
+      ">
+    {group.title}
+</h3>
+
+<div className="w-12 h-0.5 bg-blueglow mx-auto mb-8 rounded-full" />
 
         <div className="flex flex-wrap justify-center gap-x-20 gap-y-8">
           {group.skills.map((skill) => (
