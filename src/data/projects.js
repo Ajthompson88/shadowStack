@@ -5,7 +5,7 @@ const projects = [
 id: 1,
 title: "ReliefRoot",
 description:
-  "Backend-first analytics platform for tracking plant, product, and session data with a privacy-first architecture. Designed as a scalable monorepo with a focus on clean API design, relational database modeling, Docker-based development, and CI/CD. Currently building the backend foundation before frontend implementation.",
+  "Backend-first analytics platform for tracking plant, product, and session data with a privacy-first architecture. Built as a scalable monorepo using TypeScript, Express, PostgreSQL, Prisma, Docker, and GitHub Actions. Currently focused on backend infrastructure before frontend development.",
 tech: [
   "TypeScript",
   "Node.js",
