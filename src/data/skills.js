@@ -4,7 +4,7 @@ import { SiTailwindcss, SiMongodb, SiTypescript, SiVite } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiDocker } from "react-icons/si";
-import { prismaIcon } from "../assets/icons/prismaIcon";
+import { SiPrisma } from "react-icons/si";
 
 export const skills = [
   { name: "HTML", icon: FaHtml5 },
@@ -19,6 +19,5 @@ export const skills = [
   { name: "Vite", icon: SiVite },
   { name: "PostgreSQL", icon: BiLogoPostgresql },
   { name: "Docker", icon: SiDocker },
-  { name: "Prisma", icon: prismaIcon },
-
+  { name: "Prisma", icon: SiPrisma },
 ];
