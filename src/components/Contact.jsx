@@ -12,7 +12,6 @@ const Contact = () => {
   return (
     <Section
       id="contact"
-      gradient="from-gray-900 to-black"
       maxWidth="max-w-4xl"
     >
       <SectionTitle title="Contact" />

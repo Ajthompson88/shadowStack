@@ -5,7 +5,6 @@ const Experience = () => {
   return (
     <Section
       id="experience"
-      gradient="from-gray-900 to-black"
       maxWidth="max-w-4xl"
     >
       <SectionTitle title="Experience" />

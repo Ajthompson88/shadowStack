@@ -10,7 +10,7 @@ const sections = [
 ];
 
 const Header = () => (
-  <header className="w-full py-4 px-6 flex items-center justify-between bg-black/80 backdrop-blur-md sticky top-0 z-50">
+  <header className="w-full py-4 px-6 flex items-center justify-between bg-noir-900/80">
     <div className="flex items-center gap-3">
       <Logo />
     </div>

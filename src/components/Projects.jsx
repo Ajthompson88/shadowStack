@@ -7,7 +7,7 @@ const Projects = () => {
     <Section
       id="projects"
       className="glossy-section"
-      gradient="from-gray-900 to-black"
+     
     >
       <SectionTitle title="Projects" />
 
@@ -15,7 +15,16 @@ const Projects = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="glossy-card backdrop-blur-md bg-white/5 bg-gray-800 rounded-xl shadow-lg hover:shadow-blueglow/50 p-6 transition-transform transform hover:-translate-y-1"
+            className="
+            rounded-2xl
+            border border-white/10
+            bg-noir-800
+            p-6
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:border-blueglow/40
+            "
           >
             <h3 className="text-xl font-bold mb-2 text-blueglow">
               {project.title}

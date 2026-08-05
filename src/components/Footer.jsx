@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-      <footer className="text-center py-6 bg-gradient-to-b from-zinc-900 to-black">
+      <footer className="text-center py-6 bg-noir-900 border-t border-white/10">
         © {new Date().getFullYear()} Andrew Thompson. All rights reserved.
       </footer>
     );
