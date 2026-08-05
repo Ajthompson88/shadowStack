@@ -8,7 +8,7 @@ export default function Skills() {
     <Section id="skills">
       <SectionTitle title="Skills" />
 
-      <div className="space-y-12 mt-8">
+      <div className="space-y-8 mt-8">
         {skillGroups.map((group) => (
           <div key={group.title}>
             <h3 className="text-xl font-semibold text-blueglow mb-6">
