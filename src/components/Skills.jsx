@@ -8,11 +8,13 @@ return (
 <Section id="skills">
   <SectionTitle title="Skills" />
 
-<h3 className="text-2xl font-semibold text-white text-center mb-2">
+  <div className="space-y-8 mt-8">
+    {skillGroups.map((group) => (
+      <div key={group.title}>
+       <h3 className="text-2xl font-semibold text-white text-center mb-2">
     {group.title}
 </h3>
 
-<div className="w-12 h-0.5 bg-blueglow rounded-full mx-auto mb-6" />
 
 <div className="w-12 h-0.5 bg-blueglow mx-auto mb-8 rounded-full" />
 
