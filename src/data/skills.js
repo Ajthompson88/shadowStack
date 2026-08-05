@@ -3,6 +3,8 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt } from "react-ico
 import { SiTailwindcss, SiMongodb, SiTypescript, SiVite } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { SiDocker } from "react-icons/si";
+import { prismaIcon } from "../assets/icons/prismaIcon";
 
 export const skills = [
   { name: "HTML", icon: FaHtml5 },
@@ -16,4 +18,7 @@ export const skills = [
   { name: "Git", icon: FaGitAlt },
   { name: "Vite", icon: SiVite },
   { name: "PostgreSQL", icon: BiLogoPostgresql },
+  { name: "Docker", icon: SiDocker },
+  { name: "Prisma", icon: prismaIcon },
+
 ];
