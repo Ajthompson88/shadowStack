@@ -111,7 +111,7 @@ const Contact = () => {
         )}
       </form>
 
-      <div className="mt-12 flex justify-center gap-6">
+      {/* <div className="mt-12 flex justify-center gap-6">
         <a
           href="https://www.facebook.com/andrew.thompson.58726"
           target="_blank"
@@ -119,16 +119,16 @@ const Contact = () => {
           className="text-gray-400 hover:text-white transition transform hover:scale-110"
         >
           <FaFacebookF size={24} />
-        </a>
+        </a> */}
 
-        <a
+        {/* <a
           href="https://www.instagram.com/sinner25aved/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-white transition transform hover:scale-110"
         >
           <FaInstagram size={24} />
-        </a>
+        </a> */}
 
         {/* <a
           href="https://twitter.com"
