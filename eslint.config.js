@@ -35,4 +35,12 @@ export default defineConfig([
       },
     },
   },
+  {
+  files: ["api/**/*.{js,mjs,cjs}"],
+  languageOptions: {
+    globals: {
+      process: "readonly",
+    },
+  },
+},
 ])
