@@ -111,8 +111,8 @@ const Contact = () => {
         )}
       </form>
 
-      {/* <div className="mt-12 flex justify-center gap-6">
-        <a
+      <div className="mt-12 flex justify-center gap-6">
+        {/* <a
           href="https://www.facebook.com/andrew.thompson.58726"
           target="_blank"
           rel="noopener noreferrer"
