@@ -122,7 +122,7 @@ const Contact = () => {
         </a>
 
         <a
-          href="https://www.instagram.com/aj.thompson8888/"
+          href="https://www.instagram.com/sinner25aved/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-white transition transform hover:scale-110"
@@ -130,14 +130,14 @@ const Contact = () => {
           <FaInstagram size={24} />
         </a>
 
-        <a
+        {/* <a
           href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-white transition transform hover:scale-110"
         >
           <FaTwitter size={24} />
-        </a>
+        </a> */}
 
         <a
           href="https://www.linkedin.com/in/andrew-thompson-442477aa"
