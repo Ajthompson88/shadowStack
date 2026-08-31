@@ -1,141 +1,320 @@
 # ShadowStack
 
-> A sleek, modern noir-themed developer portfolio built with Vite, TailwindCSS, and React.
+> A modern developer portfolio built to showcase projects, technical
+> skills, experience, and ongoing software development work.
 
-## Table of Contents
+ShadowStack is my personal developer portfolio. It serves as a central
+place to present the applications I build, the technologies I work with,
+and my growth as a software developer.
 
-* [Project Overview](#-project-overview)
-* [Tech Stack](#-tech-stack)
-* [Folder Structure](#-folder-structure)
-* [Getting Started](#-getting-started)
-* [Installing Dependencies](#-installing-dependencies)
-* [Development](#-development)
-* [Style Guide](#-style-guide)
-* [Storybook](#-storybook)
-* [Deployment (Vercel)](#-deployment-vercel)
-* [Screenshots](#-screenshots)
-* [License](#-license)
+The project is built with React and Vite, styled with Tailwind CSS, and
+deployed with Vercel. It also includes automated testing, Storybook
+component previews, GitHub Actions continuous integration, and a
+serverless contact endpoint powered by Resend.
 
----
+## Features
 
-## Project Overview
+-   Responsive single-page developer portfolio
+-   Project showcase with GitHub and live-demo links
+-   Skills and technology presentation
+-   Experience and developer background sections
+-   Animated UI elements using Anime.js
+-   Reusable React component architecture
+-   Contact form backed by a serverless API endpoint
+-   Email delivery through Resend
+-   Honeypot bot protection and server-side input validation
+-   Component previews through Storybook
+-   Automated tests with Vitest and React Testing Library
+-   GitHub Actions CI for linting, testing, and production builds
+-   Vercel deployment configuration with SPA routing and security
+    headers
 
-ShadowStack is a developer portfolio showcasing a personalized modern noir aesthetic with animated transitions, SVG logo intro using `anime.js`, and section-based component architecture.
+## Tech Stack
 
-##  Tech Stack
+### Frontend
 
-* **Frontend**: React, Vite
-* **Styling**: Tailwind CSS
-* **Animation**: Anime.js
-* **Deployment**: Vercel
+-   React 19
+-   Vite 6
+-   Tailwind CSS
+-   React Icons
+-   Anime.js
 
-## Folder Structure
+### Contact API
 
-```
+-   Vercel serverless function
+-   Resend email API
+-   Environment-based API credentials
+-   Server-side validation
+-   Honeypot spam protection
+
+### Testing & Development
+
+-   Vitest
+-   React Testing Library
+-   Storybook
+-   ESLint
+-   PostCSS
+-   Autoprefixer
+
+### Deployment & CI
+
+-   Vercel
+-   GitHub Actions
+-   Node.js 20
+
+## Project Structure
+
+``` text
 shadowStack/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── .storybook/
+├── api/
+│   └── contact.js
+├── docs/
 ├── public/
 ├── src/
 │   ├── assets/
 │   ├── components/
+│   │   └── __tests__/
+│   ├── constants/
+│   ├── data/
+│   ├── hooks/
 │   ├── layout/
 │   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
+│   ├── index.css
+│   └── main.jsx
+├── eslint.config.js
+├── index.html
+├── package.json
+├── postcss.config.js
 ├── tailwind.config.js
-├── vite.config.js
-├── README.md
-└── package.json
+├── vercel.json
+└── vite.config.js
 ```
+
+## Application Structure
+
+The portfolio is organized into reusable sections composed in `App.jsx`:
+
+``` text
+Layout
+├── Header
+├── Hero
+├── About
+├── Projects
+├── Skills
+├── Experience
+├── Contact
+└── Footer
+```
+
+Project information is separated from presentation components so
+portfolio entries can be rendered from project data rather than being
+hard-coded directly into the project UI.
+
+## Contact Form
+
+ShadowStack includes a serverless contact endpoint at:
+
+``` text
+POST /api/contact
+```
+
+The endpoint accepts:
+
+``` json
+{
+  "name": "Example Name",
+  "email": "example@example.com",
+  "message": "Hello!",
+  "website": ""
+}
+```
+
+`website` is a honeypot field intended to remain empty for legitimate
+submissions.
+
+The API:
+
+1.  Parses the submitted request.
+2.  Silently accepts requests that trigger the honeypot.
+3.  Validates required fields.
+4.  Enforces maximum input lengths.
+5.  Sends the message through Resend.
+6.  Uses the visitor's email as the reply-to address.
+7.  Returns a success or error response to the client.
+
+The Resend API key is read from the server environment:
+
+``` text
+RESEND_API_KEY
+```
+
+Secrets should never be committed to the repository.
 
 ## Getting Started
 
-1. **Clone the repo:**
+### Prerequisites
 
-   ```bash
-   git clone https://github.com/yourusername/shadowStack.git
-   cd shadowStack
-   ```
+-   Node.js 20
+-   npm
 
-2. **Install dependencies:**
+### Clone the repository
 
-   ```bash
-   npm install
-   ```
-
-3. **Run the dev server:**
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Visit your app:**
-   Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-## Installing Dependencies
-
-Make sure these are installed:
-
-```bash
-npm install tailwindcss postcss autoprefixer animejs
+``` bash
+git clone https://github.com/Ajthompson88/shadowStack.git
+cd shadowStack
 ```
 
-## Development
+### Install dependencies
 
-Vite handles fast refresh and asset optimization. You can edit `src/components/` or `src/layout/` for modular updates.
+``` bash
+npm install
+```
 
-**Key files:**
+### Start the development server
 
-* `Hero.jsx` — Entry animation with anime.js and SVG
-* `About.jsx` — Developer biography with noir theme stylings
-* `Projects.jsx` — Previous work and case studies
-* `Skills.jsx` — Technology badges and proficiency
-* `Contact.jsx` — Email or social connection
-* `Footer.jsx` — Copyright & links
-* `tailwind.config.js` - Custom animation & utility settings
-* `App.jsx` - Section mount/transition management
+``` bash
+npm run dev
+```
 
-## Style Guide
+The Vite development server runs locally on port `5173`.
 
-Visual tokens, layout primitives, and animation conventions live in [`docs/style-guide.md`](docs/style-guide.md). Review that document before introducing new colors, gradients, CSS utilities, or animation logic so the noir aesthetic remains consistent.
+## Available Scripts
 
-## Storybook
-
-Component previews and glossy-card examples live in Storybook for rapid visual QA.
-
-- `npm run storybook` - launches Storybook on port 6006.
-- `npm run build-storybook` - produces a static Storybook build in `storybook-static/`.
-
-Stories reside next to components (e.g., `src/components/SectionTitle.stories.jsx`) and share the same Tailwind + Orbitron styling via `.storybook/preview.js`.
+  Command                     Purpose
+  --------------------------- --------------------------------------
+  `npm run dev`               Start the Vite development server
+  `npm run build`             Create a production build
+  `npm run preview`           Preview the production build locally
+  `npm run lint`              Run ESLint
+  `npm run test`              Run the Vitest test suite once
+  `npm run test:watch`        Run Vitest in watch mode
+  `npm run storybook`         Start Storybook on port 6006
+  `npm run build-storybook`   Build the static Storybook site
 
 ## Testing
 
-Automated tests run on [Vitest](https://vitest.dev/) with React Testing Library (`src/components/__tests__`, `src/layout/__tests__`).  
+Automated tests use Vitest with React Testing Library.
 
-- `npm run test` - executes the full suite once (CI uses this).
-- `npm run test:watch` - interactive mode while developing.
+Run the full test suite:
+
+``` bash
+npm run test
+```
+
+For development with automatic reruns:
+
+``` bash
+npm run test:watch
+```
+
+Tests live alongside the application code, including component tests
+under:
+
+``` text
+src/components/__tests__/
+```
+
+## Storybook
+
+Storybook provides isolated previews for reusable UI components and
+visual states.
+
+Start Storybook:
+
+``` bash
+npm run storybook
+```
+
+Build the static Storybook output:
+
+``` bash
+npm run build-storybook
+```
 
 ## Continuous Integration
 
-GitHub Actions (`.github/workflows/ci.yml`) runs on every push to `main`/`master` and on all pull requests. The workflow installs dependencies with `npm ci`, runs `npm run lint`, `npm run test`, and `npm run build`. Run those commands locally before opening a PR so CI stays green.
+The GitHub Actions CI workflow runs on pushes to `main` or `master` and
+on pull requests.
 
-## Deployment (Vercel)
+The pipeline:
 
-1. Push your code to GitHub (or another supported Git provider).
-2. Go to [Vercel](https://vercel.com) and create a new project, importing this repository.
-3. Confirm the build settings (Vercel auto-detects Vite, but double-check):
+``` text
+Checkout
+   ↓
+Setup Node.js 20
+   ↓
+npm ci
+   ↓
+npm run lint
+   ↓
+npm run test
+   ↓
+npm run build
+```
 
-   ```text
-   Build Command: npm run build
-   Output Directory: dist
-   ```
-4. Deploy. Vercel installs dependencies under Node 20 (per `package.json` `engines`) and runs the build automatically.
-5. The included `vercel.json` file keeps the SPA working by rewriting all routes to `index.html` and adding security headers.
-6. Push new commits to the connected branch (or use the Vercel dashboard) to kick off redeploys.
+Before pushing significant changes, the same checks can be run locally:
 
-## Screenshots
+``` bash
+npm run lint
+npm run test
+npm run build
+```
 
-> *Add screenshots here once the UI is ready.*
+## Deployment
+
+ShadowStack is configured for deployment on Vercel.
+
+The included `vercel.json`:
+
+-   Rewrites application routes to `index.html` for SPA behavior.
+-   Adds `X-Frame-Options: SAMEORIGIN`.
+-   Adds `X-Content-Type-Options: nosniff`.
+
+The contact endpoint under `api/contact.js` is deployed as a serverless
+API route.
+
+The deployment environment must provide:
+
+``` text
+RESEND_API_KEY
+```
+
+## Design
+
+ShadowStack uses a dark/noir visual system with glowing accents,
+reusable section layouts, card-based content, and responsive
+presentation.
+
+Project-specific visual conventions are documented in:
+
+``` text
+docs/style-guide.md
+```
+
+The goal is to keep the portfolio visually distinctive without allowing
+presentation code to overwhelm the underlying component structure.
+
+## Development Goals
+
+ShadowStack is both a portfolio and an actively maintained software
+project. Its purpose is to demonstrate more than a static résumé by
+showing practical frontend development, API integration, testing, CI,
+deployment, component design, and continued iteration.
+
+Current development priorities include:
+
+-   Keeping project information current as new applications are built
+-   Improving portfolio accessibility and responsive behavior
+-   Expanding automated test coverage
+-   Refining reusable components and visual consistency
+-   Improving the contact workflow and production email configuration
 
 ## License
 
-MIT License © 2025 Andrew Thompson
+This project is licensed under the MIT License.
+
+Copyright © 2025--2026 Andrew Thompson
