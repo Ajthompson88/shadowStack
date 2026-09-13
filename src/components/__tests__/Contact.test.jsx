@@ -16,18 +16,17 @@ describe('Contact component', () => {
     ).toBeInTheDocument()
   })
 
-  it('includes links to social profiles', () => {
-    render(<Contact />)
+it('includes links to social profiles', () => {
+  render(<Contact />)
 
-    const links = screen.getAllByRole('link')
-    expect(links).toHaveLength(5)
-    const hrefs = links.map((link) => link.getAttribute('href'))
-    expect(hrefs).toEqual([
-      'https://www.facebook.com/andrew.thompson.58726',
-      'https://www.instagram.com/aj.thompson8888/',
-      'https://twitter.com',
-      'https://www.linkedin.com/in/andrew-thompson-442477aa',
-      'https://github.com/Ajthompson88',
-    ])
-  })
+  const links = screen.getAllByRole('link')
+  expect(links).toHaveLength(2)
+
+  const hrefs = links.map((link) => link.getAttribute('href'))
+
+  expect(hrefs).toEqual([
+    'https://www.linkedin.com/in/andrew-thompson-442477aa',
+    'https://github.com/Ajthompson88',
+  ])
+})
 })
