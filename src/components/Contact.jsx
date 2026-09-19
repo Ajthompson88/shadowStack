@@ -56,7 +56,7 @@ const Contact = () => {
             <a href="/Andrew_Thompson_Resume.pdf" target="_blank" rel="noreferrer" className="button-secondary"><FiDownload aria-hidden="true" /> Résumé</a>
           </div>
           <div className="mt-6 flex gap-5">
-            <a href="https://www.linkedin.com/in/andrew-thompson-dev" target="_blank" rel="noopener noreferrer" className="social-link"><FaLinkedinIn aria-hidden="true" /> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/andrew-thompson-dev-442477aa" target="_blank" rel="noopener noreferrer" className="social-link"><FaLinkedinIn aria-hidden="true" /> LinkedIn</a>
             <a href="https://github.com/Ajthompson88" target="_blank" rel="noopener noreferrer" className="social-link"><FaGithub aria-hidden="true" /> GitHub</a>
           </div>
         </div>
