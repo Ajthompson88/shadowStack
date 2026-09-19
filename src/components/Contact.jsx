@@ -56,26 +56,23 @@ const Contact = () => {
             <a href="/Andrew_Thompson_Resume.pdf" target="_blank" rel="noreferrer" className="button-secondary"><FiDownload aria-hidden="true" /> Résumé</a>
           </div>
           <div className="mt-6 flex gap-5">
-            <a href="https://www.linkedin.com/in/andrew-thompson-442477aa" target="_blank" rel="noopener noreferrer" className="social-link"><FaLinkedinIn aria-hidden="true" /> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/andrew-thompson-dev" target="_blank" rel="noopener noreferrer" className="social-link"><FaLinkedinIn aria-hidden="true" /> LinkedIn</a>
             <a href="https://github.com/Ajthompson88" target="_blank" rel="noopener noreferrer" className="social-link"><FaGithub aria-hidden="true" /> GitHub</a>
           </div>
         </div>
 
         <form className="surface-card flex flex-col gap-5 p-7 sm:p-8" onSubmit={handleSubmit}>
           <h3 className="font-display text-xl font-semibold text-white">Send a message</h3>
-          <label className="form-label">
-            Name
-            <input type="text" name="name" placeholder="Your Name" className="form-field" required />
+          <label className="form-label" htmlFor="contact-name">
+            Name<input id="contact-name" type="text" name="name" placeholder="Your Name" className="form-field" required />
           </label>
 
-          <label className="form-label">
-            Email
-            <input type="email" name="email" placeholder="Your Email" className="form-field" required />
+          <label className="form-label" htmlFor="contact-email">
+            Email<input id="contact-email" type="email" name="email" placeholder="Your Email" className="form-field" required />
           </label>
 
-          <label className="form-label">
-            Message
-            <textarea name="message" placeholder="Your Message" rows="5" className="form-field min-h-36 resize-y" required />
+          <label className="form-label" htmlFor="contact-message">
+            Message<textarea id="contact-message" name="message" placeholder="Your Message" rows="5" className="form-field min-h-36 resize-y" required />
           </label>
 
           <input type="text" name="website" tabIndex="-1" autoComplete="off" className="hidden" aria-hidden="true" />
