@@ -13,3 +13,4 @@
 
 - [COMPLETED] PORT-000 Preserve production and create `feat/portfolio-v2` from verified `main`.
 - [COMPLETED] PORT-001 Establish recruiter-first V2 structure and Andrew Thompson branding.
+- [COMPLETED] PORT-008 Add a compact verified education and credentials section.

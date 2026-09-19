@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Experience from "./components/Experience";
 import WorkMethod from "./components/WorkMethod";
+import Certificates from "./components/Certificates";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <About />
       <Experience />
       <Skills />
+      <Certificates />
       <Contact />
       <Footer />
     </Layout>
