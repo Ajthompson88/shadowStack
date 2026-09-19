@@ -7,16 +7,18 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Experience from "./components/Experience";
+import WorkMethod from "./components/WorkMethod";
 
 export default function App() {
   return (
     <Layout>
       <Header />
       <Hero />
-      <About />
       <Projects />
-      <Skills />
+      <WorkMethod />
+      <About />
       <Experience />
+      <Skills />
       <Contact />
       <Footer />
     </Layout>

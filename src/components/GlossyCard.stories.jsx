@@ -1,5 +1,5 @@
 const cardContent = `
-ShadowStack uses noir gradients, subtle highlights, and neon glows.
+The Andrew Thompson portfolio uses dark engineering surfaces, subtle highlights, and restrained blue accents.
 Use the \`glossy-card\` class to keep cards consistent.
 `
 

@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["Orbitron", "monospace"]
+        sans: ["Inter", "sans-serif"],
+        display: ["Space Grotesk", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
         noir: {
@@ -32,10 +34,8 @@ export default {
         
       },
       animation: {
-        fadeIn: "fadeIn 1s ease-out forwards",
+        fadeIn: "fadeIn 0.7s ease-out forwards",
         slideFadeIn: "slideFadeIn 0.8s ease-out forwards",
-        glitch: "glitch 1s infinite",
-        glow: 'glow 1.5s ease-in-out forwards'
       },
       keyframes: {
         fadeIn: {
@@ -46,19 +46,10 @@ export default {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
         },
-        glow: {
-          '0%': { opacity: '0', transform: 'scale(0.95)' },
-          '100%': { opacity: '1', transform: 'scale(1)' },
       },
-        glitch: {
-          "0%": { transform: "translate(0)", opacity: 1 },
-          "20%": { transform: "translate(-2px, 2px)", opacity: 0.8 },
-          "40%": { transform: "translate(2px, -2px)", opacity: 1 },
-          "60%": { transform: "translate(-1px, 1px)", opacity: 0.9 },
-          "80%": { transform: "translate(1px, -1px)", opacity: 1 },
-          "100%": { transform: "translate(0)", opacity: 1 }
-        }
-      }
+      boxShadow: {
+        card: "0 24px 70px rgba(0, 0, 0, 0.28)",
+      },
     }
   },
   plugins: []
