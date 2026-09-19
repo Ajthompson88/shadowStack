@@ -21,7 +21,7 @@ it('includes direct contact, resume, and social links', () => {
 
   expect(screen.getByRole('link', { name: 'Email' })).toHaveAttribute('href', 'mailto:aj.thompson8888@gmail.com')
   expect(screen.getByRole('link', { name: 'Résumé' })).toHaveAttribute('href', '/Andrew_Thompson_Resume.pdf')
-  expect(screen.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://www.linkedin.com/in/andrew-thompson-dev')
+  expect(screen.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://www.linkedin.com/in/andrew-thompson-dev-442477aa')
   expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/Ajthompson88')
 })
 })
