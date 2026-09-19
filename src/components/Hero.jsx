@@ -1,6 +1,7 @@
 // src/components/Hero.jsx
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FiArrowRight, FiDownload } from "react-icons/fi";
+import { PROFILE_LINKS } from "../constants/profileLinks";
 
 export default function Hero() {
   return (
@@ -26,10 +27,10 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex items-center gap-5 text-sm text-slate-400">
-            <a className="social-link" href="https://www.linkedin.com/in/andrew-thompson-442477aa" target="_blank" rel="noreferrer">
+            <a className="social-link" href={PROFILE_LINKS.linkedin} target="_blank" rel="noreferrer">
               <FaLinkedinIn aria-hidden="true" /> LinkedIn
             </a>
-            <a className="social-link" href="https://github.com/Ajthompson88" target="_blank" rel="noreferrer">
+            <a className="social-link" href={PROFILE_LINKS.github} target="_blank" rel="noreferrer">
               <FaGithub aria-hidden="true" /> GitHub
             </a>
           </div>
