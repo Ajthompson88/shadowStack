@@ -1,49 +1,41 @@
 // src/components/Header.jsx
-import Logo from "./Logo";
-
 const sections = [
+  { label: "Work", href: "#work" },
+  { label: "Approach", href: "#approach" },
   { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
+  { label: "Background", href: "#background" },
   { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
 const Header = () => (
-  <header className="w-full py-4 px-6 flex items-center justify-between bg-noir-900/80">
-    <div className="flex items-center gap-3">
-      <Logo />
-    </div>
+  <header className="sticky top-0 z-50 border-b border-white/10 bg-noir-950/90 backdrop-blur-xl">
+    <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#top" className="group flex items-center gap-3" aria-label="Andrew Thompson, home">
+        <span className="grid h-9 w-9 place-items-center rounded-lg border border-blueglow/40 bg-blueglow/10 text-sm font-bold text-blueglow">
+          AT
+        </span>
+        <span className="font-display text-sm font-semibold tracking-wide text-white sm:text-base">
+          Andrew Thompson
+        </span>
+      </a>
 
-    {/* Mobile selector */}
-    <div className="md:hidden">
-      <label className="sr-only" htmlFor="nav-select">Navigate to section</label>
-      <select
-        id="nav-select"
-        className="bg-black/70 border border-white/20 rounded px-3 py-2 text-sm"
-        onChange={(e) => {
-          if (e.target.value) {
-            document.querySelector(e.target.value)?.scrollIntoView({ behavior: "smooth" });
-          }
-        }}
-      >
-        <option value="">Navigate…</option>
+      <nav className="hidden items-center gap-6 text-sm text-slate-300 lg:flex" aria-label="Primary navigation">
         {sections.map((section) => (
-          <option key={section.href} value={section.href}>{section.label}</option>
+          <a key={section.href} href={section.href} className="transition-colors hover:text-white">
+            {section.label}
+          </a>
         ))}
-      </select>
-    </div>
+      </nav>
 
-    {/* Desktop nav */}
-    <nav className="hidden md:flex gap-6 text-gray-300 font-medium">
-      {sections.map((section) => (
-        <a key={section.href} href={section.href} className="hover:text-white transition-colors">
-          {section.label}
-        </a>
-      ))}
-    </nav>
+      <a href="#contact" className="button-secondary hidden sm:inline-flex">
+        Let&apos;s talk
+      </a>
+      <a href="#work" className="text-sm font-semibold text-blueglow sm:hidden">
+        View work
+      </a>
+    </div>
   </header>
 );
 export default Header;
-
 

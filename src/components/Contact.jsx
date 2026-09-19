@@ -2,12 +2,10 @@ import { useState } from "react";
 import Section from "../layout/Section";
 import SectionTitle from "./SectionTitle";
 import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
+import { FiDownload, FiMail } from "react-icons/fi";
 
 const Contact = () => {
   const [status, setStatus] = useState("idle");
@@ -49,113 +47,47 @@ const Contact = () => {
   };
 
   return (
-    <Section id="contact" maxWidth="max-w-4xl">
-      <SectionTitle title="Contact" />
+    <Section id="contact" maxWidth="max-w-6xl">
+      <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <SectionTitle eyebrow="Contact" title="Let's build something dependable" description="I'm interested in junior backend and full-stack opportunities where I can contribute, keep learning, and help a team solve real problems." align="left" />
+          <div className="flex flex-wrap gap-3">
+            <a href="mailto:aj.thompson8888@gmail.com" className="button-secondary"><FiMail aria-hidden="true" /> Email</a>
+            <a href="/Andrew_Thompson_Resume.pdf" target="_blank" rel="noreferrer" className="button-secondary"><FiDownload aria-hidden="true" /> Résumé</a>
+          </div>
+          <div className="mt-6 flex gap-5">
+            <a href="https://www.linkedin.com/in/andrew-thompson-442477aa" target="_blank" rel="noopener noreferrer" className="social-link"><FaLinkedinIn aria-hidden="true" /> LinkedIn</a>
+            <a href="https://github.com/Ajthompson88" target="_blank" rel="noopener noreferrer" className="social-link"><FaGithub aria-hidden="true" /> GitHub</a>
+          </div>
+        </div>
 
-      <form
-        className="mt-10 flex flex-col gap-6"
-        onSubmit={handleSubmit}
-      >
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          className="p-4 rounded bg-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blueglow transition"
-          required
-        />
+        <form className="surface-card flex flex-col gap-5 p-7 sm:p-8" onSubmit={handleSubmit}>
+          <h3 className="font-display text-xl font-semibold text-white">Send a message</h3>
+          <label className="form-label">
+            Name
+            <input type="text" name="name" placeholder="Your Name" className="form-field" required />
+          </label>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          className="p-4 rounded bg-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blueglow transition"
-          required
-        />
+          <label className="form-label">
+            Email
+            <input type="email" name="email" placeholder="Your Email" className="form-field" required />
+          </label>
 
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          rows="5"
-          className="p-4 rounded bg-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blueglow transition"
-          required
-        />
+          <label className="form-label">
+            Message
+            <textarea name="message" placeholder="Your Message" rows="5" className="form-field min-h-36 resize-y" required />
+          </label>
 
-        {/* Honeypot field — hidden from real users */}
-        <input
-          type="text"
-          name="website"
-          tabIndex="-1"
-          autoComplete="off"
-          className="hidden"
-          aria-hidden="true"
-        />
+          <input type="text" name="website" tabIndex="-1" autoComplete="off" className="hidden" aria-hidden="true" />
 
-        <button
-          type="submit"
-          disabled={status === "sending"}
-          className="mt-2 self-start bg-blueglow-dark hover:bg-blueglow-light text-white font-semibold py-3 px-6 rounded shadow-md transition-all duration-300 hover:shadow-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {status === "sending" ? "Sending..." : "Send Message"}
-        </button>
+          <button type="submit" disabled={status === "sending"} className="button-primary mt-1 self-start disabled:cursor-not-allowed disabled:opacity-50">
+            {status === "sending" ? "Sending..." : "Send Message"}
+          </button>
 
-        {status === "success" && (
-          <p className="text-green-400">
-            Message sent successfully. I'll get back to you soon!
-          </p>
-        )}
+          {status === "success" && <p className="text-green-400">Message sent successfully. I'll get back to you soon!</p>}
 
-        {status === "error" && (
-          <p className="text-red-400">
-            Something went wrong. Please try again.
-          </p>
-        )}
-      </form>
-
-      <div className="mt-12 flex justify-center gap-6">
-        {/* <a
-          href="https://www.facebook.com/andrew.thompson.58726"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition transform hover:scale-110"
-        >
-          <FaFacebookF size={24} />
-        </a> */}
-
-        {/* <a
-          href="https://www.instagram.com/sinner25aved/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition transform hover:scale-110"
-        >
-          <FaInstagram size={24} />
-        </a> */}
-
-        {/* <a
-          href="https://twitter.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition transform hover:scale-110"
-        >
-          <FaTwitter size={24} />
-        </a> */}
-
-        <a
-          href="https://www.linkedin.com/in/andrew-thompson-442477aa"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition transform hover:scale-110"
-        >
-          <FaLinkedinIn size={24} />
-        </a>
-
-        <a
-          href="https://github.com/Ajthompson88"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition transform hover:scale-110"
-        >
-          <FaGithub size={24} />
-        </a>
+          {status === "error" && <p className="text-red-400">Something went wrong. Please try again.</p>}
+        </form>
       </div>
     </Section>
   );

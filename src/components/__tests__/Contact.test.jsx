@@ -6,7 +6,7 @@ describe('Contact component', () => {
     render(<Contact />)
 
     expect(
-      screen.getByRole('heading', { name: 'Contact' })
+      screen.getByRole('heading', { name: "Let's build something dependable" })
     ).toBeInTheDocument()
     expect(screen.getByPlaceholderText('Your Name')).toBeInTheDocument()
     expect(screen.getByPlaceholderText('Your Email')).toBeInTheDocument()
@@ -16,17 +16,12 @@ describe('Contact component', () => {
     ).toBeInTheDocument()
   })
 
-it('includes links to social profiles', () => {
+it('includes direct contact, resume, and social links', () => {
   render(<Contact />)
 
-  const links = screen.getAllByRole('link')
-  expect(links).toHaveLength(2)
-
-  const hrefs = links.map((link) => link.getAttribute('href'))
-
-  expect(hrefs).toEqual([
-    'https://www.linkedin.com/in/andrew-thompson-442477aa',
-    'https://github.com/Ajthompson88',
-  ])
+  expect(screen.getByRole('link', { name: 'Email' })).toHaveAttribute('href', 'mailto:aj.thompson8888@gmail.com')
+  expect(screen.getByRole('link', { name: 'Résumé' })).toHaveAttribute('href', '/Andrew_Thompson_Resume.pdf')
+  expect(screen.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://www.linkedin.com/in/andrew-thompson-442477aa')
+  expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/Ajthompson88')
 })
 })

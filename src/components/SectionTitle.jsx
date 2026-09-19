@@ -1,12 +1,10 @@
-import React from "react";
-
-export default function SectionTitle({ id, title }) {
+export default function SectionTitle({ id, eyebrow, title, description, align = "center" }) {
+  const centered = align === "center";
   return (
-    <div id={id} className="text-center mb-12">
-      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-        {title}
-      </h2>
-    <div className="mt-2 h-px w-20 mx-auto bg-blueglow/70" />
+    <div id={id} className={`${centered ? "text-center" : "text-left"} mb-12`}>
+      {eyebrow && <p className="eyebrow">{eyebrow}</p>}
+      <h2 className="mt-3 max-w-4xl font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">{title}</h2>
+      {description && <p className={`mt-5 max-w-3xl text-lg leading-8 text-slate-400 ${centered ? "mx-auto" : ""}`}>{description}</p>}
     </div>
   );
 }

@@ -2,12 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background-color: #151a23 !important;
-  @apply text-white font-mono antialiased;
-  min-height: 100vh;
+  @apply min-h-screen bg-noir-950 font-sans text-white antialiased;
+}
+
+::selection {
+  @apply bg-blueglow/30 text-white;
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.22em] text-blueglow;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-white/10 bg-noir-800/70 shadow-card backdrop-blur-sm;
+  }
+
+  .button-primary,
+  .button-secondary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blueglow focus-visible:ring-offset-2 focus-visible:ring-offset-noir-950;
+  }
+
+  .button-primary {
+    @apply bg-blueglow-dark text-white hover:bg-blueglow hover:text-noir-950;
+  }
+
+  .button-secondary {
+    @apply border border-white/15 bg-white/[0.03] text-white hover:border-blueglow/60 hover:bg-blueglow/10;
+  }
+
+  .social-link {
+    @apply inline-flex items-center gap-2 transition-colors hover:text-white focus:outline-none focus-visible:text-white;
+  }
+
+  .tech-pill {
+    @apply rounded-full border border-blueglow/20 bg-blueglow/[0.07] px-3 py-1.5 font-mono text-xs text-slate-300;
+  }
+
+  .form-label {
+    @apply flex flex-col gap-2 text-sm font-semibold text-slate-200;
+  }
+
+  .form-field {
+    @apply rounded-lg border border-white/10 bg-noir-950/70 p-3.5 font-normal text-white placeholder:text-slate-600 focus:border-blueglow/60 focus:outline-none focus:ring-2 focus:ring-blueglow/20;
+  }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(0, 178, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 178, 255, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(0, 178, 255, 0.14), transparent 38%);
+  background-size: 48px 48px, 48px 48px, 100% 100%;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
